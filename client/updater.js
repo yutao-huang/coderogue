@@ -42,7 +42,7 @@ export default class Updater {
     }
 
     async loadCode() {
-        let code = 'Log in to see your code.'
+        let code = '// Log in to see your code.'
         if (this.client.credentials.isLoggedIn) {
             let result = await this.getJson('code');
             if (!result.error) code = result.code;

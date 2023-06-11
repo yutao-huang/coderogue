@@ -28,7 +28,7 @@ export default class HunterLevel extends BlockLevel {
     doLevelAction() {
         super.doLevelAction();
         this.givePoints();
-        if (Math.random() < 0.1) this.spawnMob();
+        // if (Math.random() < 0.1) this.spawnMob();
         this.decideMobTarget();
         for (let mob of this.mobs) {
             if (mob) mob.doMobAction();

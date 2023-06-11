@@ -4,6 +4,9 @@ import Grownups from './grownups.js';
 import Map from './map.js';
 
 import CanvasMap from './canvas_map.js';
+import FPV from './fpv.js';
+import FPV2 from './fpv2.js';
+import FPV3 from './fpv3.js';
 import MonacoEditor from './monaco_editor.js';
 
 const alertLevels = [
@@ -19,6 +22,9 @@ export default class Display {
     constructor(client) {
         this.client = client;
         this.map = new CanvasMap(client, 'canvas');
+        // this.fpv = new FPV3(client);
+        this.fpv = new FPV(client, 'fpv');
+        // this.fpv = new FPV2(client, 'fpv');
         this.levelToRender = 0;
         this.renderPlayersFrom = 0;
         this.numPlayers = 0;
@@ -65,6 +71,7 @@ export default class Display {
         let level = this.levels[this.levelToRender];
         this.renderTitle(level.name);
         this.map.render(level, this.players);
+        this.fpv.update(level, this.players);
         this.renderPlayers(this.players);
         if (this.isShowing('player-tab')) {
             this.renderPlayerTab();

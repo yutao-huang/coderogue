@@ -88,6 +88,7 @@
                     <button class="nav-link active" id="code-tab" data-bs-toggle="tab" data-bs-target="#code" role="tab">Code</button>
                     <button class="nav-link" id="log-tab" data-bs-toggle="tab" data-bs-target="#log" role="tab">Log</button>
                     <button class="nav-link" id="player-tab" data-bs-toggle="tab" data-bs-target="#player" role="tab">Player</button>
+                    <button class="nav-link" id="pov-tab" data-bs-toggle="tab" data-bs-target="#pov" role="tab">POV</button>
                     <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" role="tab">News</button>
                     <button class="nav-link" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" role="tab">General</button>
                     <button class="nav-link" id="api-tab" data-bs-toggle="tab" data-bs-target="#api" role="tab">Api</button>
@@ -176,6 +177,15 @@
                                         <tr><td>Handle #</td></tr>
                                     </tbody>
                                 </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POV tab -->
+                    <div class="tab-pane" id="pov" role="tabpanel">
+                        <div class="row">
+                            <div class="col-8">
+                                <canvas id="fpv" style="width: 640; height: 400"></canvas>
                             </div>
                         </div>
                     </div>

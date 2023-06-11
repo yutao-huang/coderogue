@@ -20,7 +20,7 @@ export default class Repositories {
         this.server = server;
         this.root = playerRoot;
         if (this.root.startsWith('~/')) {
-            this.root = path.join(process.env.HOME, this.root.slice(2));
+            this.root = path.join(process.env.HOMEPATH, this.root.slice(2));
         }
     }
 
